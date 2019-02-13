@@ -1,1 +1,3 @@
+class PastriesController < ApplicationController
 
+end 
