@@ -1,1 +1,19 @@
+<h3><%=@pastry.name%></h3>
 
+<label>Ingredients:</label><br>
+<input type="text" id="" name="ingredients" value="<%=@pastry.ingredients%>"><br>
+  
+<label>Additional Kitchenware Used:</label><br>
+<input type="text" id="" name="kitchenware" value="<%=@pastry.kitchenware%>"><br>
+  
+<label>Directions:</label><br>
+<input type="text" id="" name="directions" value="<%=@pastry.directions%>"><br>
+  
+<label>Price Range:</label><br>
+<input type="text" id="" name="price_range" value="<%=@pastry.price_range%>"><br>
+
+
+<form method="POST" action='/pastries/<%=@user.slug%>-<%=@pastry.slug%>/delete'>
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <button type="submit" value="Delete Pastry" name="Delete Pastry" id="Delete Pastry">Delete Pastry</button>
+</form>
