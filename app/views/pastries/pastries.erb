@@ -2,5 +2,5 @@
 <a href="/pastries/new">Create a new Pastry</a><br>
 <br>
 <%@pastries.each do |pastry|%>
-<a href="/pastries/<%=pastry.user.slug%>/<%=pastry.slug%>"><%=pastry.name%></a><br>
+<a href="/pastries/<%=pastry.user.slug%>/<%=pastry.slug%>"><%=pastry.name%> by <%=@pastry.user.username%></a><br>
 <%end%>
