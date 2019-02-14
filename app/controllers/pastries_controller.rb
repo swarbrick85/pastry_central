@@ -14,7 +14,7 @@ class PastriesController < ApplicationController
   end
 
   post '/pastries' do
-    if params[:ingredients] && params[:kitchenware] && params[:directions] && params[:price_range] && params[:name]
+    if params[:ingredients] && params[:kitchenware] && params[:directions] && params[:price_range] && params[:name] && !User.find_by_id(session[:user_id]).pastries.find_by(name: params[:name])
       @pastry = Pastry.create(ingredients: params[:ingredients], kitchenware: params[:kitchenware], directions: params[:directions], price_range: params[:price_range], name: params[:name], user_id: session[:user_id])
       redirect "/pastries/#{@pastry.user.slug}/#{@pastry.slug}"
     else
