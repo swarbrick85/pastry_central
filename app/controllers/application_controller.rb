@@ -10,7 +10,11 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
-    
+    if logged_in?
+      redirect '/user_page'
+    else
+      erb :index
+    end
   end
 
   helpers do
@@ -26,7 +30,7 @@ class ApplicationController < Sinatra::Base
         true
       else
         false
-      end 
+      end
     end
   end
 end

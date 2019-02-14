@@ -1,4 +1,6 @@
-
-<%@recipes.each do |recipe|%>
-<a href="/recipes/<%=recipe.user.slug%>-<%=recipe.slug%>"><%=@recipe.name%></a>
+<h3>Here they are! all the pastries</h3>
+<a href="/pastries/new">Create a new Pastry</a><br>
+<br>
+<%@pastries.each do |pastry|%>
+<a href="/pastries/<%=pastry.user.slug%>/<%=pastry.slug%>"><%=pastry.name%></a><br>
 <%end%>

@@ -1,0 +1,10 @@
+<h1>Welcome, <%=@user.username%></h1>
+<h3>These are your recipes.</h3><br>
+
+<%@pastries.each do |pastry|%>
+<a href="/pastries/<%=@user.slug%>-<%=recipe.slug%>"><%=@recipe.name%></a><br>
+<%end%>
+
+<form method="POST" action="/logout">
+  <button type="submit">Logout</button>
+</form>

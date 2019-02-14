@@ -1,22 +1,29 @@
 <h3><%=@pastry.name%></h3>
 
-<form method="POST" action='/pastries/<%=@user.slug%>-<%=@pastry.slug%>/'>
+<form method="POST" action='/pastries/<%=@pastry.id%>/edit'>
+
+<input id="hidden" type="hidden" name="_method" value="PATCH">
+
+<label>Name:</label><br>
+<input type="text" id="" name="name" value="<%=@pastry.name%>"><br>
 
 <label>Ingredients:</label><br>
 <input type="text" id="" name="ingredients" value="<%=@pastry.ingredients%>"><br>
-  
+
 <label>Additional Kitchenware Used:</label><br>
 <input type="text" id="" name="kitchenware" value="<%=@pastry.kitchenware%>"><br>
-  
+
 <label>Directions:</label><br>
 <input type="text" id="" name="directions" value="<%=@pastry.directions%>"><br>
-  
+
 <label>Price Range:</label><br>
 <input type="text" id="" name="price_range" value="<%=@pastry.price_range%>"><br>
-  
+
+<button type="submit" name="edit_pastry">Edit Pastry</button>
+
 </form>
 
-<form method="POST" action='/pastries/<%=@user.slug%>-<%=@pastry.slug%>/delete'>
+<form method="POST" action='/pastries/<%=@pastry.id%>/delete'>
   <input id="hidden" type="hidden" name="_method" value="DELETE">
   <button type="submit" value="Delete Pastry" name="Delete Pastry" id="Delete Pastry">Delete Pastry</button>
 </form>
