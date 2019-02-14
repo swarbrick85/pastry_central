@@ -2,7 +2,7 @@
 <h3>These are your recipes.</h3><br>
 
 <%@pastries.each do |pastry|%>
-<a href="/pastries/<%=@user.slug%>-<%=recipe.slug%>"><%=@recipe.name%></a><br>
+<a href="/pastries/<%=@user.slug%>/<%=pastry.slug%>"><%=@pastry.name%></a><br>
 <%end%>
 
 <form method="POST" action="/logout">
