@@ -7,7 +7,7 @@ It needs to be connected to a web server of some kind.
 
 ## Usage
 
-This is the outline of a website. It has no css attached. Also, to make it visible it needs to be connected to a web server.
+This is the outline of a website. It has no css attached. To realistically make it into a website, some sort of visually appealing web design would likely need to be added. Also, to make it visible it needs to be connected to a web server.
 
 ## Contributing
 
