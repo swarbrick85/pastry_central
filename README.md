@@ -3,11 +3,11 @@ MVC Sinatra application for storing an exhaustive list of pastry recipes.
 
 ## Installation
 
-
+It needs to be connected to a web server of some kind.
 
 ## Usage
 
-This is the outline of a website. It has no css attached. To make it visible it needs to be connected to a web server.
+This is the outline of a website. It has no css attached. Also, to make it visible it needs to be connected to a web server.
 
 ## Contributing
 
